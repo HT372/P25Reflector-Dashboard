@@ -38,16 +38,14 @@ include "version.php";
                 padding: 10px;
                 }
  	</style>
-    <title><?php echo getConfigItem("Info", "Name", $configs); ?> - YSFReflector-Dashboard by DG9VH</title>
+   <title>Haiti P25Reflector-Dashboard by DG9VH</title>
   </head>
   <body>
   <div class="page-header" style="position:relative;">
-  <h1><small>YSFReflector-Dashboard by DG9VH for Reflector:</small>  <?php echo getConfigItem("Info", "Name", $configs); ?> / <?php echo getConfigItem("Info", "Description", $configs); ?></h1>
-  <h4>YSFReflector by G4KLX Version: 
-  <?php  echo getYSFReflectorVersion(); ?></h4>
-  <?php
-  if (LOGO !== "") {
-?>
+  <h1><center>TG 37225 / P25 Haiti</center></h1>
+  <h4>P25Reflector Dashboard by DG9VH</h4><br>
+  <h4>P25Reflector by G4KLX Version:
+  20161101 (compiled 03 March 2020)</h4>
 <div id="Logo" style="position:absolute;top:-43px;right:10px;"><img src="<?php echo LOGO ?>" width="250px" style="width:250px; border-radius:10px;box-shadow:2px 2px 2px #808080; padding:1px;background:#FFFFFF;border:1px solid #808080;" border="0" hspace="10" vspace="10" align="absmiddle"></div>
 <?php  	
   }
@@ -70,14 +68,14 @@ if (defined("SHOWOLDMHEARD")) {
 <?php
 $lastReload = new DateTime();
 $lastReload->setTimezone(new DateTimeZone(TIMEZONE));
-echo "YSFReflector-Dashboard V ".VERSION." | Last Reload ".$lastReload->format('Y-m-d, H:i:s')." (".TIMEZONE.")";
+echo "P25Reflector-Dashboard V ".VERSION." | Last Reload ".$lastReload->format('Y-m-d, H:i:s')." (".TIMEZONE.")";
 $time = microtime();
 $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $finish = $time;
 $total_time = round(($finish - $start), 4);
 echo '<!--Page generated in '.$total_time.' seconds.-->';	
-?> | get your own at: <a href="https://github.com/dg9vh/YSFReflector-Dashboard">https://github.com/dg9vh/YSFReflector-Dashboard</a>
+?> | get your own at: <a href="https://github.com/HT372/P25Reflector-Dashboard">https://github.com/HT372/P25Reflector-Dashboard</a>
 	</div>
   </body>
 </html>
